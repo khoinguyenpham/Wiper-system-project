@@ -3,7 +3,7 @@ We will try to use different methods for the same project to see how we can use 
 
 ## Model
 
-![image](https://github.com/user-attachments/assets/4acde372-8e52-48cb-82f0-9b84715e8216)
+<img width="443" alt="image" src="https://github.com/user-attachments/assets/dad30621-4aea-45cc-87ca-b9c5f57f7c90">
 
 ### Wiper system control inputs
 
