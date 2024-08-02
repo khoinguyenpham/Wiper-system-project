@@ -26,7 +26,7 @@ WinprMode
 
 - 1: Aut: + if RainSnsrErr is TRUE -> PWM shall 0
           
-          + WiprSpdReq require speed level in case of automatic mode 0-7.
+          + WiprSpdReq require speed level in case of automatic mode 0 1 2 3 4 5 6 7.
                     
           + Rain sensor to PWM table: 0 40% 45% 50% 55% 60% 65% 70%.
                     
