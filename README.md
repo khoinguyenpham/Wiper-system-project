@@ -1,7 +1,7 @@
 # WIPER SYSTEM PROJECT
 I will try to use different methods for the same project to see how I can use different subsystems and different blocks to generate or to model the same software component. The main target for this software component is the duty cycle for the motor, the wiper motor.
 
-## Model
+## Model in root level
 
 <img width="443" alt="image" src="https://github.com/user-attachments/assets/dad30621-4aea-45cc-87ca-b9c5f57f7c90">
 
@@ -22,9 +22,15 @@ f(x): This functionality is executed every ten millisecond. So from this informa
 ### Wiper system control processing
 
 WinprMode -> 0: Off -> WiprMotPwmDutyCyc: 0%
+
           -> 1: Aut -> if RainSnsrErr is TRUE -> PWM shall 0
+          
                     -> WiprSpdReq require speed level in case of automatic mode [0 1 2 3 4 5 6 7].
+                    
                     -> Rain sensor to PWM table [0 40% 45% 50% 55% 60% 65% 70%].
+                    
                     -> Require have a smooth PWM command in automatic mode -> avoid abrupt changes.
+                    
           -> 2: LoSpd -> WiprMotPwmDutyCyc: 40%
+          
           -> 3: HiSpd -> WiprMotPwmDutyCyc: 70%
