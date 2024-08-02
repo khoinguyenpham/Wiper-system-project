@@ -21,16 +21,17 @@ f(x): This functionality is executed every ten millisecond. So from this informa
 
 ### Wiper system control processing
 
-WinprMode -> 0: Off -> WiprMotPwmDutyCyc: 0%
+WinprMode 
+-> 0: Off -> WiprMotPwmDutyCyc: 0%
 
-          -> 1: Aut -> if RainSnsrErr is TRUE -> PWM shall 0
+-> 1: Aut -> if RainSnsrErr is TRUE -> PWM shall 0
           
-                    -> WiprSpdReq require speed level in case of automatic mode [0 1 2 3 4 5 6 7].
+          -> WiprSpdReq require speed level in case of automatic mode [0 1 2 3 4 5 6 7].
                     
-                    -> Rain sensor to PWM table [0 40% 45% 50% 55% 60% 65% 70%].
+          -> Rain sensor to PWM table [0 40% 45% 50% 55% 60% 65% 70%].
                     
-                    -> Require have a smooth PWM command in automatic mode -> avoid abrupt changes.
+          -> Require have a smooth PWM command in automatic mode -> avoid abrupt changes.
                     
-          -> 2: LoSpd -> WiprMotPwmDutyCyc: 40%
+-> 2: LoSpd -> WiprMotPwmDutyCyc: 40%
           
-          -> 3: HiSpd -> WiprMotPwmDutyCyc: 70%
+-> 3: HiSpd -> WiprMotPwmDutyCyc: 70%
